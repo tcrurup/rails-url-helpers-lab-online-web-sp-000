@@ -7,4 +7,12 @@ class Student < ActiveRecord::Base
     self.active == true ? 'active':'inactive'
   end
 
+  def activate
+    self.active = true
+  end
+
+  def deactivate
+    self.active = false
+  end
+
 end
