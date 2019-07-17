@@ -4,6 +4,6 @@ class Student < ActiveRecord::Base
   end
 
   def active_status
-    self.active == 'true' ? 'active':'inactive'
+    self.active == true ? 'active':'inactive'
   end
 end
