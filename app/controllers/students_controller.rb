@@ -11,7 +11,6 @@ class StudentsController < ApplicationController
   def activate
     set_student
     @student.active ? @student.deactivate : @student.activate
-    @student.save
   end
 
   private
