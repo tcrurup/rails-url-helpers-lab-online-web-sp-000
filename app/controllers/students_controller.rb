@@ -10,7 +10,7 @@ class StudentsController < ApplicationController
 
   def activate
     set_student
-    @student.active ? @student.active = false : @student.active = true
+    @student.active ? @student.deactivate : @student.activate
     @student.save
   end
 
@@ -19,4 +19,5 @@ class StudentsController < ApplicationController
     def set_student
       @student = Student.find(params[:id])
     end
+
 end
