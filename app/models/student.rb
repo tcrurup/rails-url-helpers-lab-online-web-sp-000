@@ -9,10 +9,12 @@ class Student < ActiveRecord::Base
 
   def activate
     self.active = true
+    self.save
   end
 
   def deactivate
     self.active = false
+    self.save
   end
 
 end
